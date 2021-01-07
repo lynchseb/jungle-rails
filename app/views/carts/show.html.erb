@@ -3,6 +3,9 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
+  <div class="alert">
+
+  <% if enhanced_cart.size > 0 %>
 
   <div class="panel panel-default items">
     <table class="table table-bordered">
@@ -48,5 +51,13 @@
       <% end %>
     </div>
   </div>
+  <% else %>
+  <div class="alert"> 
+    <h3>
+      Your Cart is empty
+    </h3>
+    <%= link_to "Let's go Shopping!", :root %>
+  </div>
+  <% end %>
 
 </section>
