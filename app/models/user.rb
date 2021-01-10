@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
     # If user exists and password is correct
     if user && user.authenticate(password)
       user
-    # else
-    #   nil
+    else
+      nil
     end
   end
 end

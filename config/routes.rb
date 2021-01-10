@@ -18,6 +18,11 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
+   # Login form, loggin / logout
+  post '/login' => 'sessions#create'
+  get '/login' => 'sessions#new'
+  get '/logout' => 'sessions#destroy'
+
   # Admin routes
   namespace :admin do
     root to: 'dashboard#show'
